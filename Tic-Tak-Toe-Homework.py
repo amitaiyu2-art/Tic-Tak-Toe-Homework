@@ -34,7 +34,7 @@ def player_move(board, symbol):
         try:
             move = int(input("Which square do you wanna got to? (1-9)"))
             if move not in range(1,10 or not board[move-1]).isdigit():
-                print("Invalid move. Please try again.")
+                print("Sorry, you cant do that. Please try again.")
         except ValueError:
             print("Please enter a number between 1-9.")
         board[move-1] = symbol
@@ -70,7 +70,7 @@ def check_full(board):
     return all(not spot.isdigit() for spot in board)
 
 def tic_tak_toe():
-    print("Hello! This is Tic Tak Toe")
+    print("Hello! This is a Tic Tak Toe game.")
     player_name = input(Fore.BLUE + "What's your name? " + Style.RESET_ALL)
     while True:
         board['1','2','3','4','5','6','7','8','9']
